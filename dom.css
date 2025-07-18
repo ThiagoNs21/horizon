@@ -1,0 +1,163 @@
+section div{
+    --isVisible:(".closes" none, ".opens" flex, event-click);
+    --colorChanger:("section div" cyan, "section div" white,event-click);
+    --backChanger:("section div" blue, "section div" red,event-click);
+    display: var(--isVisible);
+    background-color: var(--backChanger);
+    color: var(--colorChanger);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+section div{
+    --general:[40rem 20rem 40];
+    --widthDiv: (".closes" 10rem, ".opens" var(--general), event-click);
+    --heightDiv:(".closes" 5rem, ".opens" 8rem, event-click);
+    width: var(--widthDiv);
+    height: var(--heightDiv);
+}
+
+section div{
+    justify-content: center;
+    align-items: center;
+}
+
+
+section{
+    padding: .5rem;
+    border-width: .2rem;
+    border-color: gray;
+    border-radius: .4rem;
+    margin: .5rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+section nav{
+    flex-direction: row;  
+    justify-content: center; 
+    margin: 0;
+}
+section nav *{
+    margin: .5rem;
+}
+
+button{
+    width: 9rem;
+    height: 3rem;
+    text-align: center;
+    justify-content: center;
+}
+
+aside{
+    background-color: rgb(197, 197, 197);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+article{
+    --wth:[70rem 30rem 70];
+    width: var(--wth);
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    z-index: 1000;
+    --wth:[100rem 100vw 90];
+    --pad:[5rem 5vw 90];   
+    --hgt:[3rem 4rem 50]; 
+    width: var(--wth);
+    flex-direction: row;
+    justify-content: space-between;
+    height: var(--hgt);
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem var(--pad);
+    margin: auto;
+    position: fixed;
+    top: 0;
+}
+
+body header nav a{
+    --fs:[1.5rem 1.75rem 50];
+    font: bold var(--fs) times; 
+    color: gray;
+}
+
+header ul{
+    --show:("menu" flex , "menu" flex, event-click);
+    --hide:("header button" none , "menu" flex, event-click);
+    --isVisible:[var(--show) var(--hide) 50];
+    --flow:[row column 50];
+    --pos:[static fixed 50];
+    --bw:[0 .5rem 50];
+    --translate:[0 -50% 50];
+    display: var(--isVisible);
+    flex-direction: var(--flow);
+    position: var(--pos);
+    top: 4rem;
+    left: 50%;
+    transform: translateX(var(--translate));
+    border-width: var(--bw);
+    border-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+header ul li{
+    --wth:[5rem 95vw 50];
+    --hgt:[2rem 4rem 50];
+    --mb:[0 .25rem 50];
+    --bc:[white rgb(222, 222, 222) 50];
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--wth);
+    height: var(--hgt);
+    text-align: center;
+    background-color: var(--bc);
+    margin-bottom: var(--mb);
+    text-transform: capitalize;
+    color: gray;
+}
+
+header menu{
+    --show:("header button" flex , "menu" none, event-click);
+    --hide:("header button" none , "header button" none, event-click);
+    --isVisible:[var(--hide) var(--show) 50];
+    display: var(--isVisible);
+}
+
+i{
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+header button{
+    --show:("header button" none , "menu" flex, event-click);
+    --hide:("header button" none , "header button" none, event-click);
+    --isVisible:[var(--hide) var(--show) 50];
+    display: var(--isVisible);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 10rem;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+header + *{
+    margin-top: 3.5rem;
+}
+
+.color-gray{
+    color: gray;
+}
